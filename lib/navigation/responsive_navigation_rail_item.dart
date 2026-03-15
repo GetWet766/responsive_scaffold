@@ -67,11 +67,14 @@ class ResponsiveNavigationRailItem extends StatelessWidget {
     final width =
         lerpDouble(ResponsiveScaffoldConst.baseItemWidth, expandedWidth, t)!;
 
+    final minWidth = ResponsiveScaffoldConst.collapsedRailWidth > compactTextWidth + 40 ? ResponsiveScaffoldConst.collapsedRailWidth : lerpDouble(compactTextWidth + 40, expandedWidth, t)!;
+
     return Container(
       constraints: BoxConstraints(
-        minWidth: ResponsiveScaffoldConst.collapsedRailWidth,
+        minWidth: minWidth,
       ),
-      width: lerpDouble(compactTextWidth + 40, expandedWidth, t)!,
+      width: double.infinity,
+      // width: lerpDouble(compactTextWidth + 40, expandedWidth, t)!,
       padding: EdgeInsets.only(bottom: lerpDouble(4, 0, t)!),
       child: Material(
         color: Colors.transparent,
