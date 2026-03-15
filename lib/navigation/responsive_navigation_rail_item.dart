@@ -31,6 +31,7 @@ class ResponsiveNavigationRailItem extends StatelessWidget {
             : destination.icon;
 
     final compactLabelStyle = theme.textTheme.labelMedium?.copyWith(
+      letterSpacing: 0.5,
       color:
           selected
               ? theme.colorScheme.onSecondaryContainer
