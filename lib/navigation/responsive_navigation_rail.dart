@@ -72,7 +72,7 @@ class ResponsiveNavigationRail extends StatelessWidget {
                 ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: collapsed ? CrossAxisAlignment.start : CrossAxisAlignment.stretch,
                   children: [
                     for (int i = 0; i < destinations.length; i++)
                       ResponsiveNavigationRailItem(
