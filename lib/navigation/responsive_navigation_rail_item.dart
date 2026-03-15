@@ -167,7 +167,7 @@ class ResponsiveNavigationRailItem extends StatelessWidget {
 
                 Positioned(
                   bottom: 0,
-                  width: ResponsiveScaffoldConst.baseItemWidth,
+                  width: collapsedTextWidth > ResponsiveScaffoldConst.baseItemWidth ? collapsedTextWidth : ResponsiveScaffoldConst.baseItemWidth,
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: Opacity(
