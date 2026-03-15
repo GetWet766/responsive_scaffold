@@ -56,6 +56,7 @@ class ResponsiveNavigationRailItem extends StatelessWidget {
       maxLines: 1,
       textDirection: Directionality.of(context),
     )..layout();
+    final compactTextWidth = compactTextPainter.width;
     final compactTextHeight = compactTextPainter.height;
 
     final expandedWidth =
@@ -70,6 +71,7 @@ class ResponsiveNavigationRailItem extends StatelessWidget {
       constraints: BoxConstraints(
         minWidth: ResponsiveScaffoldConst.collapsedRailWidth,
       ),
+      width: compactTextWidth,
       padding: EdgeInsets.only(bottom: lerpDouble(4, 0, t)!),
       child: Material(
         color: Colors.transparent,
