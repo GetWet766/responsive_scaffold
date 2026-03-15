@@ -172,7 +172,7 @@ class ResponsiveNavigationRailItem extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Opacity(
                       opacity: 1 - t,
-                      child: Text(destination.label, style: compactLabelStyle),
+                      child: Text(destination.label, style: compactLabelStyle, maxLines: 1, softWrap: false,),
                     ),
                   ),
                 ),
